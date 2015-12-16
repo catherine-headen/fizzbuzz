@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Fizz Buzz</title>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <style>
+    p {background-color: yellow;}
+    </style>
+  </head>
+  <body>
+  <p class="displayFizz">
+  </p>
+
+  <script type="text/javascript">
+  $(document).ready(function () {
+function enterFizz(fizzy){
+
+     for (var x=1; x < (fizzy+1); x++){
+       // $( "body" ).append("<p>" + fizzy + "</p>");
+
+if ((x % 3 === 0) && (x % 5 === 0)){
+    $( "body" ).append("<p>fizz buzz</p>");
+//console.log("fizz buzz");
+}
+
+else if (x % 5 ===0){
+        $( "body" ).append( "<p>buzz</p>" );
+//console.log("buzz");
+}
+
+else if (x % 3 === 0){
+        $( "body" ).append( "<p>fizz</p>" );
+//console.log("fizz");
+}
+
+else{
+
+//console.log(x);
+$( "body" ).append("<p>" + x + "</p>");
+}   
+
+}
+}
+
+var reply = prompt("Please enter a number");
+var submitReply = +reply;
+
+if (parseInt(submitReply)){
+enterFizz(submitReply);
+}
+else{
+    var reply = prompt("Please enter a number");
+}
+});
+//if (parseInt){
+  // enterFizz(reply); 
+//}
+
+
+//else()
+  //  display try again
+
+</script>
+
+
+  </body>
+  </html>
